@@ -1,0 +1,21 @@
+{% extends "main.html" %}
+{% block content %}
+<div class="content">
+  <h1>じゃんけんゲーム</h1>
+  <p>プレイヤーの手: {{ player_choice }}</p>
+  <p>敵の手: {{ enemy_choice }}</p>
+  <p>結果: {{ result }}</p>
+</div>
+<form action="/game" method="post">
+  <div class="choices">
+    <button type="submit" name="choice" value="グー" class="custom-button">グー</button>
+    <button type="submit" name="choice" value="チョキ" class="custom-button">チョキ</button>
+    <button type="submit" name="choice" value="パー" class="custom-button">パー</button>
+  </div>
+</form>
+
+
+
+
+
+{% endblock %}
